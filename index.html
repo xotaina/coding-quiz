@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Coding Quiz Challenge</title>
+</head>
+<body>
+    
+    <!-- Main page section -->
+    <section id="main" class="pages" data-state="shown">
+        <header>
+            <h1>Coding Quiz Challenge</h1>
+        </header>
+        <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score time by ten seconds!</p>
+        <button id="start" class="btn">Start Quiz</button>
+    </section>
+
+    <!-- Timer display -->
+    <p id="timer">Time: <span id="time-left">75</span> sec</p> 
+
+    <!-- High score and timers display -->
+    <button id="high-score-button">View Highscores</button>
+
+    <!-- Question sections -->
+    <section id="question-1" class="pages" data-state="hidden" style="display:none">
+        <h2>Commonly used data types DO NOT include:</h2>
+        <button class="wrong">1. Strings</button>
+        <button class="wrong">2. Booleans</button>
+        <button class="right">3. Alerts</button>
+        <button class="wrong">4. Numbers</button>
+    </section>
+
+    <section id="question-2" class="pages" data-state="hidden" style="display:none">
+        <h2>The condition in an if/else statement is enclosed within _______.</h2>
+        <button class="wrong">1. Quotes</button>
+        <button class="wrong">2. Curly Brackets</button>
+        <button class="right">3. Parenthesis</button>
+        <button class="wrong">4. Square Brackets</button>
+    </section>
+
+    <section id="question-3" class="pages" data-state="hidden" style="display:none">
+        <h2>Arrays in JavaScript can be used to store _______.</h2>
+        <button class="wrong">1. Numbers and Strings</button>
+        <button class="wrong">2. Other Arrays</button>
+        <button class="wrong">3. Booleans</button>
+        <button class="right">4. All of the above</button>
+    </section>
+
+    <section id="question-4" class="pages" data-state="hidden" style="display:none">
+        <h2>String values must be enclosed within _______ when being assigned to variables.</h2>
+        <button class="wrong">1. Commas</button>
+        <button class="right">2. Quotes</button>
+        <button class="wrong">3. Curly Brackets</button>
+        <button class="wrong">4. Parenthesis</button>
+    </section>
+
+    <section id="question-5" class="pages" data-state="hidden" style="display:none">
+        <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
+        <button class="right">1. console.log</button>
+        <button class="wrong">2. For Loops</button>
+        <button class="wrong">3. Terminal/Bash</button>
+        <button class="wrong">4. JavaScript</button>
+    </section>
+
+    <!-- End quiz page -->
+    <section id="end-quiz" class="pages" data-state="hidden" style="display:none">
+        <h2>All done!</h2>
+        <p id="final-score"></p>
+        <div id="enter-initials">
+            <p id="enter-inst">Enter Initials: </p>
+            <textarea name="initials" id="initials" cols="30" rows="1"></textarea>
+            <button id="submit">Submit</button>
+        </div>
+    </section>
+
+    <!-- High score page -->
+    <section id="high-score" class="pages" data-state="hidden" style="display:none">
+        <h2>High Scores</h2>
+        <div id="table"></div>
+        <button id="go-back">Go Back</button>
+        <button id="clear">Clear High Scores</button>
+    </section>
+
+    <!-- Display of wrong and right on answered questions -->
+    <section id="result-wrong" class="result" data-state="hidden" style="display:none">
+        <p>Wrong</p>
+    </section>
+
+    <section id="result-right" class="result" data-state="hidden" style="display:none">
+        <p>Correct!</p>
+    </section>
+
+    <script src="script.js"></script> 
+</body>
+</html>
