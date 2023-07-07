@@ -6,8 +6,8 @@ const quizQuestions = [
     correctAnswer: 2,
   },
   {
-    question: "The condition in an if/else statement is enclosed within _______.",
-    answers: ["1. Quotes", "2. Curly Brackets", "3. Parenthesis", "4. Square Brackets"],
+    question: "Which of the following is NOT a valid JavaScript data type?",
+    answers: ["1. String", "2. Number", "3. Undefined", "4. Boolean"],
     correctAnswer: 3,
   },
   {
@@ -57,6 +57,9 @@ function startTimer() {
 function checkAnswer(e) {
   const selectedAnswer = e.target.textContent;
   const question = quizQuestions[currentQuestion];
+
+  console.log("Selected answer:", selectedAnswer);
+  console.log("Correct answer:", question.answers[question.correctAnswer]);
 
   if (selectedAnswer === question.answers[question.correctAnswer]) {
     score++;
