@@ -121,3 +121,15 @@ function initQuiz() {
 
 // Initialize the quiz on page load
 window.addEventListener("load", initQuiz);
+
+document.getElementById("submit").addEventListener("click", function (event) {
+  event.preventDefault();
+  var initials = document.getElementById("initials").value;
+  var score = document.getElementById("final-score").textContent;
+  var scoreList = document.getElementById("score-list");
+  var scoreListItem = document.createElement("li");
+  scoreListItem.textContent = initials + " - " + score;
+  scoreList.appendChild(scoreListItem);
+  document.getElementById("end-quiz").style.display = "none";
+  document.getElementById("high-scores").style.display = "block";
+});
